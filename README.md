@@ -74,7 +74,7 @@ New Avoid Bloodmoon Injection allows players to temporarily avoid bloodmoons. Ea
 Next Bloodmoon day now shows on the compass next to Day/Time
 
 # History 
-A lot of the mods started life when i was working on the JaxTeller718 Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i have plans to hopefully add more as time goes on. 
+A lot of the mods started life when i was working on the JaxTeller718 Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i  add more as time goes on. 
 
 # Credits 
 Thanks to JaxTeller718 for the base template for the Action Skills.
