@@ -76,3 +76,5 @@ Next Bloodmoon day now shows on the compass next to Day/Time
 # History 
 A lot of the mods started life when i was working on the JaxTellar Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i have plans to hopefully add more as time goes on. 
 
+# Credits 
+Thanks to Jax Tellar for the base template for the Action Skills.
