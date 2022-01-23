@@ -4,7 +4,7 @@ The Wincheser is a mini overhaul mod that is aimed to extend the vanilla game ra
 
 All the modules are open source and feel free to re-use them. Credits are nice but not needed :)
 
-#Overview
+# Overview
 
 Action skills
  - Action skills have been added for all weapons and tools. The more you use the items the better you become at using, crafting and repairing them. 
@@ -69,6 +69,10 @@ Vehicles disabled during bloodmoons
 Workstation smelting timers show total times and not increments
  - Stacks of materials in the forge now show the total smelting time! 
 
-#History 
+New Avoid Bloodmoon Injection allows players to temporarily avoid bloodmoons. Easy to craft and use the injection gives players a 20min buff that masks them from bloodmoons.
+
+Next Bloodmoon day now shows on the compass next to Day/Time
+
+# History 
 A lot of the mods started life when i was working on the JaxTellar Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i have plans to hopefully add more as time goes on. 
 
