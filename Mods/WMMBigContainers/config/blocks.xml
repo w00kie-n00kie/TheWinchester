@@ -1,0 +1,74 @@
+﻿<config>
+	<append xpath="/blocks">
+		<block name="cntWookiesSecureStorageChest">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Tags" value="door"/>
+			<property name="Class" value="SecureLoot"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/>
+			<property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="FuelValue" value="300"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="LootList" value="playerStorageWookie"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="LPHardnessScale" value="8"/>
+			<!--<property name="DowngradeBlock" value="cntStorageChest"/>-->
+			<property name="Group" value="Basics,Building,advBuilding"/>
+			<property name="DescriptionKey" value="cntWookiesSecureStorageChestDesc"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="MaxDamage" value="1000"/>
+		</block>
+		
+		<block name="cntWookiesChestWritable">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntShippingCrateHero"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab"/>
+			<property name="Place" value="TowardsPlacer"/> <!-- sign model, not needed for cube -->
+			<property name="DescriptionKey" value="cntStorageGenericSignedDesc"/>
+			<property name="Tags" value="door"/>
+			<property name="Class" value="SecureLootSigned"/>
+			<property name="LootList" value="playerStorageWookie"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="MaxDamage" value="400"/>
+			<property name="Texture" value="572"/>
+			<property name="UseGlobalUV" value="L,L,L,L,L,L"/>
+			<property name="FuelValue" value="300"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<!--<property name="DowngradeBlock" value="cntStorageGenericSignedInsecure"/>-->
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="EconomicValue" value="6"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		</block>
+		
+	<!--
+		Farm Plot Raised
+		farmPlotBlockPlayerRaised
+		farmPlotBlockRaised
+		shapefarmPlotRaised
+
+
+		cntWoodFurnitureBlockVariantHelper
+		almacenamiento
+		cntStorageGenericSigned
+		cntStorageGenericSignedInsecure
+		-->
+	</append>
+</config>

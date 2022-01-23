@@ -1,0 +1,7 @@
+﻿<config>
+	<append xpath="/lootcontainers">
+		<lootcontainer id="1000" name="playerStorageWookie" count="0" size="10,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+			<item name="cobweb" count="1,2"/>
+		</lootcontainer>
+	</append>
+</config>

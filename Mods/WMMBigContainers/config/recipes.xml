@@ -1,0 +1,13 @@
+﻿<config>
+	<append xpath="/recipes">
+		<recipe name="cntWookiesSecureStorageChest" count="1"  craft_time="10">
+			<ingredient name="resourceWood" count="100"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceLeather" count="5"/>
+		</recipe>
+		<recipe name="cntWookiesChestWritable" count="1"  craft_time="10">
+			<ingredient name="resourceNail" count="10"/>
+			<ingredient name="resourceWood" count="12"/>
+		</recipe>
+	</append>
+</config>

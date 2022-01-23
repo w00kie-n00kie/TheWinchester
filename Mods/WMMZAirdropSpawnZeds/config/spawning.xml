@@ -1,0 +1,7 @@
+﻿<spawning>
+  <insertAfter xpath="/spawning/biome[@name='snow']" >
+    <biome name="airdrop">
+      <spawn maxcount="10" respawndelay="3" time="Any" entitygroup="ZombiesAll" />
+    </biome>
+  </insertAfter>
+</spawning>

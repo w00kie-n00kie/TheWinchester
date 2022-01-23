@@ -1,0 +1,10 @@
+<config>
+	<insertAfter xpath="/qualityinfo/quality[@key='6']">
+		<quality key="7" color="52B9D1"/>
+		<!--6ECCE1-->
+		<quality key="8" color="4E7841"/>
+		<quality key="9" color="D366B2"/>
+		<quality key="10" color="9F2620"/>
+	</insertAfter>
+</config>
+<!--<quality key="7" color="0CECE8"/><quality key="8" color="F586E6"/><quality key="9" color="E90000"/><quality key="10" color="094910"/>-->

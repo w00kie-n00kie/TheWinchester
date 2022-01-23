@@ -1,0 +1,33 @@
+﻿<config>
+	<append xpath="/lootcontainers/lootgroup[@name='perkBooks']">
+		<item name="magazinePerkASPistols" count="1"/>
+		<item name="magazinePerkASShotguns" count="1"/>
+		<item name="magazinePerkASAutomatics" count="1"/>
+		<item name="magazinePerkASRifles" count="1"/>
+		<item name="magazinePerkASArchery" count="1"/>
+		<item name="magazinePerkASBladed" count="1"/>
+		<item name="magazinePerkASBlunt" count="1"/>
+		<item name="magazinePerkASMiningTools" count="1"/>
+		<item name="magazinePerkASConstructionTools" count="1"/>
+		<item name="magazinePerkASElectric" count="1"/>
+		<item name="magazinePerkASJavelin" count="1"/>
+		<item name="magazinePerkASBrawler" count="1"/>
+	</append>
+
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='perkBooks']">
+		<lootgroup name="magazineBooks">
+			<item name="magazinePerkASPistols" count="1"/>
+			<item name="magazinePerkASShotguns" count="1"/>
+			<item name="magazinePerkASAutomatics" count="1"/>
+			<item name="magazinePerkASRifles" count="1"/>
+			<item name="magazinePerkASArchery" count="1"/>
+			<item name="magazinePerkASBladed" count="1"/>
+			<item name="magazinePerkASBlunt" count="1"/>
+			<item name="magazinePerkASMiningTools" count="1"/>
+			<item name="magazinePerkASConstructionTools" count="1"/>
+			<item name="magazinePerkASElectric" count="1"/>
+			<item name="magazinePerkASJavelin" count="1"/>
+			<item name="magazinePerkASBrawler" count="1"/>
+		</lootgroup>
+	</insertBefore>
+</config>

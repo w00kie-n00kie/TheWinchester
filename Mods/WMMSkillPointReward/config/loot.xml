@@ -1,0 +1,5 @@
+﻿<config>
+	<append xpath="/lootcontainers/lootgroup[@name='groupQuestSchematics']">
+		<item name="magazineGainSkillPoint" count="1" loot_prob_template="QuestT3Prob"/>
+	</append>
+</config>
