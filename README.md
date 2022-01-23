@@ -1,5 +1,11 @@
 # TheWinchester
 
+The Wincheser is a mini overhaul mod that is aimed to extend the vanilla game rather than totally change everything. Expect more zombies (A LOT more...), items that degrade and new game/video options that allow the user to choose how they would like to play the mod.
+
+All the modules are open source and feel free to re-use them. Credits are nice but not needed :)
+
+#Overview
+
 Action skills
  - Action skills have been added for all weapons and tools. The more you use the items the better you become at using, crafting and repairing them. 
  - Skills for each item type go from 1 - 100. 
@@ -62,3 +68,7 @@ Vehicles disabled during bloodmoons
 
 Workstation smelting timers show total times and not increments
  - Stacks of materials in the forge now show the total smelting time! 
+
+#History 
+A lot of the mods started life when i was working on the JaxTellar Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i have plans to hopefully add more as time goes on. 
+
