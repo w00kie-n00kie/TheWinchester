@@ -10,22 +10,22 @@ Action skills
  - Action skills have been added for all weapons and tools. The more you use the items the better you become at using, crafting and repairing them. 
  - Skills for each item type go from 1 - 100. 
  - The higher your AS the better quality items you can make (up to a maximum quality of 901)
- - The higher your AS the less quality that is lost when an item is repaired
- - Books that help increase you skills can be found in loot
+ - The higher your AS the less quality that is lost when an item is repaired (Lose starts at 100 and goes down to 10 lose at maximum skill level)
+ - Books that help increase you skills can be found in loot and quest rewards
 
 Item Quality 1 - 1000
- - All tools and weapons now go upto a maximum quality of 1000
- - There are now 10 levels instead of the standard 6
+ - All tools and weapons now go upto a maximum quality of 1000 (max craft level is 901)
+ - There are now 10 levels of quality instead of the standard 6
  - Quality of crafted items is tied to the relevant AS, the higher the AS the higher quality you can craft
  - Item quality degrades each time you repair them, starting with a lose of 100 quality per repair. This lose goes down as your relevant AS increases down to a minimum lose of 10 per repair (tools and weapons cannot last forever!).
 
 Biome Zombie Spawning (i.e. Zombies that spawn outside POIs)
  - Zombies now have a chance to repawn quicker (sometimes much quicker!). See game option below
- - Cities are much more dangerous now and the more POIs around the more Zombies that will spawn. See game option below
+ - Cities and towns are much more dangerous now and the more POIs around the more Zombies that will spawn. See game option below
 
 Game Options (These settings are set at the game level and hence are set for all players)
  - Max Zombies - This is the maximum number of zombies that can spawn at any given time
- - City Zombie Multipier - Sets how many zombies spawn in cities. This is a multipler so the higher the number the more zombies that may spawn.
+ - City Zombie Multipier - Sets how many zombies spawn in cities and towns. This is a multipler so the higher the number the more zombies that may spawn.
  - Biome Respawn Delay - This new setting sets how often biome zombies repawn. The lower the number the more often biome zombies may spawn.
  - Enable/Disable Head Shot Only mode
  - Enable/Disable Zombie Rage
@@ -71,7 +71,11 @@ Workstation smelting timers show total times and not increments
 
 New Avoid Bloodmoon Injection allows players to temporarily avoid bloodmoons. Easy to craft and use the injection gives players a 20min buff that masks them from bloodmoons.
 
-Next Bloodmoon day now shows on the compass next to Day/Time
+Vehicles now have cruise control. Pressing Q will put them into cruise control and move forward without having to keep the W key pressed
+
+Wookies need lots of stuff and hence have bigger storage!
+
+The next Bloodmoon day is shown on the compass next to the normal Day and Time (no more needing fingers and toes to work out when the next bloodmoon is!).
 
 # History 
 A lot of the mods started life when i was working on the JaxTeller718 Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i  add more as time goes on. 
