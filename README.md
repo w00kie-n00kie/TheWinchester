@@ -35,6 +35,7 @@ Game Options (These settings are set at the game level and hence are set for all
  - Enable/Disable Zombie Rage
  - Wandering Horde Frequency - Sets a range of how often wandering hordes spawn. i.e. 2 - 14 hours means a wandering horde will spawn much quick than normal
  - Wandering Horde Multiplier - Sets how many zombies spawn in wandering hordes. This is a multipler so the higher the number the more zombies that will spawn.
+ - Max Claim Count - Sets maximum number of Land Claim Blocks each player can have active at one time!
 
 Video Options (These settings are set on a per player basis and each player can change their own values)
  - Show/Hide Crosshair
@@ -80,6 +81,8 @@ Vehicles now have cruise control. Pressing Q will put them into cruise control a
 Wookies need lots of stuff and hence have bigger storage!
 
 The next Bloodmoon day is shown on the compass next to the normal Day and Time (no more needing fingers and toes to work out when the next bloodmoon is!).
+
+You can now choose how many active Land Claim Blocks are allowed per player via a new Game Option.
 
 # History 
 A lot of the mods started life when i was working on the JaxTeller718 Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and more will be added soon. 
