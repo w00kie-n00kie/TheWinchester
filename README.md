@@ -78,7 +78,7 @@ Wookies need lots of stuff and hence have bigger storage!
 The next Bloodmoon day is shown on the compass next to the normal Day and Time (no more needing fingers and toes to work out when the next bloodmoon is!).
 
 # History 
-A lot of the mods started life when i was working on the JaxTeller718 Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and i  add more as time goes on. 
+A lot of the mods started life when i was working on the JaxTeller718 Ravenhearst mod. These have been converted and extended to work with A20. New modules have been added and more will be added soon. 
 
 # Credits 
 Thanks to JaxTeller718 for the base template for the Action Skills.
