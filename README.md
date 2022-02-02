@@ -35,7 +35,7 @@ Game Options (These settings are set at the game level and hence are set for all
  - Enable/Disable Zombie Rage
  - Wandering Horde Frequency - Sets a range of how often wandering hordes spawn. i.e. 2 - 14 hours means a wandering horde will spawn much quick than normal
  - Wandering Horde Multiplier - Sets how many zombies spawn in wandering hordes. This is a multipler so the higher the number the more zombies that will spawn.
- - Max Claim Count - Sets maximum number of Land Claim Blocks each player can have active at one time!
+ - Max Claim Count - Sets maximum number of Land Claim Blocks each player can have active at one time.
 
 Video Options (These settings are set on a per player basis and each player can change their own values)
  - Show/Hide Crosshair
