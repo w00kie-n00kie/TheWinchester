@@ -2,6 +2,8 @@
 
 The Wincheser is a mini overhaul mod that is aimed to extend the vanilla game rather than totally change everything. Expect more zombies (A LOT more...), items that degrade and new game/video options that allow the user to choose how they would like to play the mod.
 
+New things will be added ovber time but the aim is to keep the game as a Zombie Survival game so please dont expect lots of magic creatures in it! Most of my changes are around making the game harder and more challanging but giving the players a better UI experience and quality of life.
+
 All the modules are open source and feel free to re-use them. Credits are nice but not needed :)
 
 # Overview
