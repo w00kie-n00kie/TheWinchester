@@ -1,4 +1,4 @@
-<JaxTeller718>
+<config>
 	<append xpath="/entity_classes/entity_class[@name='playerMale']">
 		<effect_group name="Action Skills">
 			<passive_effect name="PerkLevel" operation="base_add" value="@AS_ConstructionTools_Lvl" tags="perkASConstructionTools"/>
@@ -16,4 +16,4 @@
 			<passive_effect name="PerkLevel" operation="base_add" value="@AS_Automatics_Lvl" tags="perkASAutomatics"/>
 		</effect_group>
 	</append>
-</JaxTeller718>
+</config>

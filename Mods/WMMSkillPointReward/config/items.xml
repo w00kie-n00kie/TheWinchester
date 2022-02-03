@@ -1,7 +1,7 @@
 <config>
 	<append xpath="/items">
 		<item name="magazineGainSkillPoint">
-			<property name="DescriptionKey" value="magazineGainSkillPoint"/>
+			<property name="DescriptionKey" value="magazineGainSkillPointDesc"/>
 			<property name="CustomIconTint" value="22,181,54"/>
 			<property name="Extends" value="schematicMaster"/>
 			<effect_group tiered="false">
