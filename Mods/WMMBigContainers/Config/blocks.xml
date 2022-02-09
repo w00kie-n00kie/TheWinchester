@@ -1,0 +1,204 @@
+﻿<config>
+	<append xpath="/blocks">
+		<block name="cntWookiesChestInsecure">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Loot"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/>
+			<property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="LootList" value="playerStorageWookie"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<block name="cntWookiesChest">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Tags" value="door"/>
+			<property name="Class" value="SecureLoot"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/>
+			<property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="FuelValue" value="300"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="LootList" value="playerStorageWookie"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="LPHardnessScale" value="8"/>
+			<property name="DowngradeBlock" value="cntWookiesChestInsecure"/>
+			<property name="Group" value="Basics,Building,advBuilding"/>
+			<property name="DescriptionKey" value="cntWookiesChestDesc"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="UnlockedBy" value="wookiesChestSchematic"/>
+		</block>
+
+		<block name="cntWookiesChestWritableInsecure">
+			<property name="CreativeMode" value="Test"/>
+			<property name="CustomIcon" value="cntShippingCrateHero"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="playerStorageWookie"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?crate_storePrefab.prefab"/>
+			<property name="UseGlobalUV" value="L,L,G,G,G,G"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" count="0"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		</block>
+		<block name="cntWookiesChestWritable">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntShippingCrateHero"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab"/>
+			<property name="Place" value="TowardsPlacer"/> <!-- sign model, not needed for cube -->
+			<property name="DescriptionKey" value="cntWookiesChestWritableDesc"/>
+			<property name="Tags" value="door"/>
+			<property name="Class" value="SecureLootSigned"/>
+			<property name="LootList" value="playerStorageWookie"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="Texture" value="572"/>
+			<property name="UseGlobalUV" value="L,L,L,L,L,L"/>
+			<property name="FuelValue" value="300"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="DowngradeBlock" value="cntWookiesChestWritableInsecure"/>
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="EconomicValue" value="6"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="UnlockedBy" value="wookiesChestSchematic"/>
+		</block>
+
+		<block name="cntWookiesVaultInsecure">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Loot"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/>
+			<property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="LootList" value="playerStorageWookieVault"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="MaxDamage" value="1500"/>
+		</block>
+		<block name="cntWookiesVault">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Tags" value="door"/>
+			<property name="Class" value="SecureLoot"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/>
+			<property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="FuelValue" value="300"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="LootList" value="playerStorageWookieVault"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="LPHardnessScale" value="8"/>
+			<property name="DowngradeBlock" value="cntWookiesVaultInsecure"/>
+			<property name="Group" value="Basics,Building,advBuilding"/>
+			<property name="DescriptionKey" value="cntWookiesVaultDesc"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="MaxDamage" value="3000"/>
+			<property name="UnlockedBy" value="wookiesVaultSchematic"/>
+		</block>
+
+		<block name="cntWookiesVaultWritableInsecure">
+			<property name="CreativeMode" value="Test"/>
+			<property name="CustomIcon" value="cntShippingCrateHero"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="playerStorageWookieVault"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="MaxDamage" value="1500"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?crate_storePrefab.prefab"/>
+			<property name="UseGlobalUV" value="L,L,G,G,G,G"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" count="0"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		</block>
+		<block name="cntWookiesVaultWritable">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntShippingCrateHero"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<!-- sign model, not needed for cube -->
+			<property name="DescriptionKey" value="cntWookiesVaultWritableDesc"/>
+			<property name="Tags" value="door"/>
+			<property name="Class" value="SecureLootSigned"/>
+			<property name="LootList" value="playerStorageWookieVault"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="MaxDamage" value="3000"/>
+			<property name="Texture" value="572"/>
+			<property name="UseGlobalUV" value="L,L,L,L,L,L"/>
+			<property name="FuelValue" value="300"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="DowngradeBlock" value="cntWookiesVaultWritableInsecure"/>
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="EconomicValue" value="6"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="UnlockedBy" value="wookiesVaultSchematic"/>
+		</block>
+	</append>
+</config>

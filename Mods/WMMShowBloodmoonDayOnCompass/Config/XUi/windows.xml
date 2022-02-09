@@ -1,0 +1,3 @@
+﻿<windows>
+	<set xpath="/windows/window[@name='windowCompass']/sprite/label/@text">{daytitle}:[{daycolor}]{day}[-] - {timetitle}:{time}[-] - {bloodmoontitle}{bloodmoonday}</set>
+</windows>

@@ -1,0 +1,3 @@
+﻿<windows>
+  <set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>
+</windows>

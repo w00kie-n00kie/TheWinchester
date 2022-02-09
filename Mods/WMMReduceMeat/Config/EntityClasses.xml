@@ -1,0 +1,14 @@
+﻿<entity_classes>
+	<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">12</set> <!-- 30 --> 
+	<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">9</set> <!-- 20 -->
+	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">3</set> <!-- 10 -->
+	<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">3</set> <!-- 10 -->
+	<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">20</set> <!-- 50 -->
+	<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">11</set> <!-- 25 -->
+	<set xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">5</set> <!-- 12 -->
+	<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">14</set> <!-- 35 -->
+	<set xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">11</set> <!-- 25 --> 
+	<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">3</set> <!-- 10 -->
+	<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">12</set> <!-- 30 --> 
+	<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@event='Harvest' and @name='foodRawMeat'and @tag='butcherHarvest']/@count">40</set> <!-- 100 --> 
+</entity_classes>

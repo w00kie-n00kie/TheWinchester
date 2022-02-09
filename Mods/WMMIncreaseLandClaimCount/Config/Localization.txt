@@ -1,0 +1,5 @@
+﻿Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+goLandClaimCountValue,UI,Menu,x,,{0},,{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0}
+goLandClaimCountValues,UI,Menu,x,,{0},,{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0}
+goLandClaimCount,UI,Menu,x,,Max Claim Count,,,,,,,,,,,,,,
+goLandClaimCountDesc,UI,Menu,x,,Maximum number of active Land Claim Blocks each player can have on the map at the same time.,,,,,,,,,,,,,,

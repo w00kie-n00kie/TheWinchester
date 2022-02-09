@@ -1,0 +1,5 @@
+﻿<progression>
+	<set xpath="/progression/level[@max_level='300']/@exp_to_level">11500</set>
+	<set xpath="/progression/level[@max_level='300']/@experience_multiplier">1.06</set>
+	<set xpath="/progression/level[@max_level='300']/@clamp_exp_cost_at_level">52</set>
+</progression>
