@@ -1,4 +1,0 @@
-﻿<entity_classes>
-  <remove xpath="/entity_classes/entity_class[@name='sc_General']/property[@name='MaxHealth']" />
-  <set xpath="/entity_classes/entity_class[@name='sc_General']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax']/@value">1000</set>
-</entity_classes>

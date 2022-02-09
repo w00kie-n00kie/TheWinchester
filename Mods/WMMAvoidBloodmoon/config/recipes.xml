@@ -1,8 +1,0 @@
-﻿<config>
-	<append xpath="/recipes">
-		<recipe name="drugAvoidBloodmoon" count="1" craft_time="3">
-			<ingredient name="drinkJarBoiledWater" count="1"/>
-			<ingredient name="resourcePotassiumNitratePowder" count="3"/>
-		</recipe>
-	</append>
-</config>

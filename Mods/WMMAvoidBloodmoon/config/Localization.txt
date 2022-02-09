@@ -1,5 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
-buffAvoidBloodmoon,items,Medical,,,Avoid Bloodmoon,,,,,,,,,,,,,,
-buffAvoidBloodmoonDesc,items,Medical,,,An injection that will hide you from bloodmoons. Zombies in other players bloodmoons may still agro you!,,,,,,,,,,,,,,
-drugAvoidBloodmoon,items,Medical,,,Avoid Bloodmoon Injection,,,,,,,,,,,,,,
-drugAvoidBloodmoonDesc,items,Medical,,,An injection that will hide you from bloodmoons. Zombies in other players bloodmoons may still agro you!,,,,,,,,,,,,,,

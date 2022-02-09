@@ -1,3 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
-magazineGainSkillPoint,items,Medical,,,Gain 1 Skill Point,,,,,,,,,,,,,,
-magazineGainSkillPointDesc,items,Medical,,,Read this book to gain 1 skill point.,,,,,,,,,,,,,,

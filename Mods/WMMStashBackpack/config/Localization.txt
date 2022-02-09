@@ -1,4 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
-lblDumpInventory,,UI,Tooltip,New,Stash Inventory,,,,,
-lblDumpMatchingInventory,,UI,Tooltip,New,Stash Matching Items To Inventory,,,,,
-lblDumpInfo,,UI,Tooltip,New,Hover over a slot and press X to lock or unlock a slot.,,,,,

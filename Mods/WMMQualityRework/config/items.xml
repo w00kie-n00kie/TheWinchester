@@ -1,9 +1,0 @@
-<config>
-	<set xpath="/items/item/effect_group/passive_effect[@tier='1,6']/@tier">1,1000</set>
-	<set xpath="/items/item/effect_group/passive_effect[@tier='2,6']/@tier">200,1000</set>
-
-	<insertAfter xpath="/items/item/effect_group/passive_effect[@name='DegradationMax' and @operation='base_set']">
-		<passive_effect name="DegradationMax" operation="perc_add" value="0.1"/>
-	</insertAfter>
-
-</config>
