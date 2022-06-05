@@ -573,10 +573,10 @@
 	</append>
 	<append xpath="/items/item[@name='gunHandgunT3SMG5']">
 		<effect_group name="Action Skills">
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="AS_Automatics_XP" operation="add" value="6">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="AS_Pistols_XP" operation="add" value="6">
 				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_Automatics_XP" operation="add" value="24"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_Pistols_XP" operation="add" value="24"/>
 		</effect_group>
 	</append>
 	<append xpath="/items/item[@name='gunHandgunT2Magnum44']">
