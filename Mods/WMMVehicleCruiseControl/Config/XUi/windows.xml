@@ -1,0 +1,12 @@
+﻿<windows>
+	<insertBefore xpath="/windows/window[@name='HUDRightStatBars']/rect/rect[@stat_type='VehicleFuel']">
+		<rect width="168" height="46" pos="0,50" controller="XUiC_WMMCruiseControl, WMMVehicleCruiseControl" visible="True">
+			<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+			<sprite depth="2" pos="3,-3" name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+			<filledsprite depth="5" name="BarContent" width="169" type="filled" fill="1" flip="Horizontally" />
+			<label depth="6" name="TextContent" pos="125,-24" font_size="32" color="[white]" justify="center" pivot="right" text="Cruise" width="120" height="35"/>
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+		</rect>
+	</insertBefore>
+</windows>
