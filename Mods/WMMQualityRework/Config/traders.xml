@@ -2,14 +2,14 @@
 	<!--<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='1']/@quality">1,20</set><set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2']/@quality">1,40</set><set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3']/@quality">1,60</set><set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='4']/@quality">1,80</set><set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='5']/@quality">1,100</set><set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='6']/@quality">1,120</set><set xpath="/traders/trader_info/trader_items/item[@quality='1']/@quality">1,20</set><set xpath="/traders/trader_info/trader_items/item[@quality='2']/@quality">1,40</set><set xpath="/traders/trader_info/trader_items/item[@quality='3']/@quality">1,60</set><set xpath="/traders/trader_info/trader_items/item[@quality='4']/@quality">1,80</set><set xpath="/traders/trader_info/trader_items/item[@quality='5']/@quality">1,100</set><set xpath="/traders/trader_info/trader_items/item[@quality='6']/@quality">1,120</set><set xpath="/traders/trader_info/tier_items/item[@quality='1']/@quality">1,20</set><set xpath="/traders/trader_info/tier_items/item[@quality='2']/@quality">1,40</set><set xpath="/traders/trader_info/tier_items/item[@quality='3']/@quality">1,60</set><set xpath="/traders/trader_info/tier_items/item[@quality='4']/@quality">1,80</set><set xpath="/traders/trader_info/tier_items/item[@quality='5']/@quality">1,100</set><set xpath="/traders/trader_info/tier_items/item[@quality='6']/@quality">1,120</set>-->
 	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='1,3']/@quality">1,400</set>
 	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='1,4']/@quality">1,600</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='1,5']/@quality">1,800</set>
 
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2,3']/@quality">200,400</set>
+	<!--<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2,3']/@quality">200,400</set>-->
 	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2,4']/@quality">200,600</set>
 	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2,5']/@quality">200,800</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2,6']/@quality">200,1000</set>
 
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3,4']/@quality">400,600</set>
+	<!--<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3,4']/@quality">400,600</set>-->
 	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3,5']/@quality">400,800</set>
 	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3,6']/@quality">400,1000</set>
-	
-	<!-- <set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='2,5']/@quality">200,800</set> -->
 </config>

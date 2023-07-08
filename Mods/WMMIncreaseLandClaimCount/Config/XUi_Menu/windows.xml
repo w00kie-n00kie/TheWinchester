@@ -1,5 +1,0 @@
-﻿<windows>
-	<insertAfter xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']/grid/gameoption[@name='LandClaimSize']">
-		<gameoption name="LandClaimCount" title="goLandClaimCount" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="goLandClaimCountValue" />
-	</insertAfter>
-</windows>

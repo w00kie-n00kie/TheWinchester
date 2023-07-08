@@ -1,0 +1,5 @@
+﻿<windows>
+	
+	<set xpath="/windows/window[@name='mapArea']/@controller">XUiC_WMMMapArea, WMMTraderQuestMap</set>
+
+</windows>

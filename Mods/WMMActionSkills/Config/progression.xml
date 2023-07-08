@@ -1,22 +1,430 @@
 ﻿<config>
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkDeadEye']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkDemolitionsExpert']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkJavelinMaster']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkSalvageOperations']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkBoomstick']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkPummelPete']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkSkullCrusher']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkHeavyArmor']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkMiner69r']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkBrawler']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkMachineGunner']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkArchery']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkGunslinger']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkDeepCuts']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkLightArmor']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkElectrocutioner']" />
-	<remove xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @tags='perkTurrets']" />
+	<!-- Crafting Skills replacements -->
 
+	<!-- craftingHarvestingTools -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']">
+		<crafting_skill name="craftingHarvestingTools" max_level="100" parent="attCrafting" name_key="craftingHarvestingToolsName" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_tool">
+
+			<display_entry icon="meleeToolRepairT0StoneAxe" name_key="harvestToolsStone" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolPickT1IronPickaxe" name_key="harvestToolsIron" has_quality="false" unlock_level="35" >
+				<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolPickT2SteelPickaxe" name_key="harvestToolsSteel" has_quality="false" unlock_level="70" >
+				<unlock_entry item="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolPickT3Auger" name_key="harvestToolsMechanical" has_quality="false" unlock_level="100" >
+				<unlock_entry item="meleeToolPickT3Auger,meleeToolAxeT3Chainsaw" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="meleeToolPickT3Auger,meleeToolAxeT3Chainsaw"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingRepairTools -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']">
+		<crafting_skill name="craftingRepairTools" max_level="50" parent="attCrafting" name_key="craftingRepairToolsName" desc_key="craftingRepairToolsDesc" long_desc_key="craftingRepairToolsLongDesc" icon="ui_game_symbol_hammer">
+
+			<display_entry icon="meleeToolRepairT1ClawHammer" name_key="meleeToolRepairT1ClawHammer" has_quality="false" unlock_level="25" >
+				<unlock_entry item="meleeToolRepairT1ClawHammer" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolRepairT3Nailgun" name_key="meleeToolRepairT3Nailgun" has_quality="false" unlock_level="50" >
+				<unlock_entry item="meleeToolRepairT3Nailgun" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,50" value="1" tags="meleeToolRepairT1ClawHammer"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,50" value="1" tags="meleeToolRepairT3Nailgun"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingSalvageTools -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']">
+		<crafting_skill name="craftingSalvageTools" max_level="75" parent="attCrafting" name_key="craftingSalvageToolsName" desc_key="craftingSalvageToolsDesc" long_desc_key="craftingSalvageToolsLongDesc" icon="ui_game_symbol_wrench">
+
+			<display_entry icon="meleeToolSalvageT1Wrench" name_key="meleeToolSalvageT1Wrench" has_quality="false" unlock_level="25" >
+				<unlock_entry item="meleeToolSalvageT1Wrench" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeToolSalvageT2Ratchet" name_key="meleeToolSalvageT2Ratchet" has_quality="false" unlock_level="50" >
+				<unlock_entry item="meleeToolSalvageT2Ratchet" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeToolSalvageT3ImpactDriver" name_key="meleeToolSalvageT3ImpactDriver" has_quality="false" unlock_level="75" >
+				<unlock_entry item="meleeToolSalvageT3ImpactDriver" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,75" value="1" tags="meleeToolSalvageT1Wrench"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,75" value="1" tags="meleeToolSalvageT2Ratchet"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="meleeToolSalvageT3ImpactDriver"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingKnuckles -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']">
+		<crafting_skill name="craftingKnuckles" max_level="75" parent="attCrafting" name_key="craftingKnucklesName" desc_key="craftingKnucklesDesc" long_desc_key="craftingKnucklesLongDesc" icon="ui_game_symbol_boxer">
+
+			<display_entry icon="meleeWpnKnucklesT0LeatherKnuckles" name_key="meleeWpnKnucklesT0LeatherKnuckles" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeWpnKnucklesT0LeatherKnuckles" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnKnucklesT1IronKnuckles" name_key="meleeWpnKnucklesT1IronKnuckles" has_quality="false" unlock_level="30" >
+				<unlock_entry item="meleeWpnKnucklesT1IronKnuckles" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnKnucklesT3SteelKnuckles" name_key="meleeWpnKnucklesT3SteelKnuckles" has_quality="false" unlock_level="75" >
+				<unlock_entry item="meleeWpnKnucklesT3SteelKnuckles" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnKnucklesT0LeatherKnuckles"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnKnucklesT1IronKnuckles"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="meleeWpnKnucklesT3SteelKnuckles"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingBlades -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']">
+		<crafting_skill name="craftingBlades" max_level="75" parent="attCrafting" name_key="craftingBladesName" desc_key="craftingBladesDesc" long_desc_key="craftingBladesLongDesc" icon="ui_game_symbol_knife">
+
+			<display_entry icon="meleeWpnBladeT0BoneKnife" name_key="meleeWpnBladeT0BoneKnife" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeWpnBladeT0BoneKnife" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnBladeT1HuntingKnife" name_key="meleeWpnBladeT1HuntingKnife" has_quality="false" unlock_level="30" >
+				<unlock_entry item="meleeWpnBladeT1HuntingKnife" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnBladeT3Machete" name_key="meleeWpnBladeT3Machete" has_quality="false" unlock_level="75" >
+				<unlock_entry item="meleeWpnBladeT3Machete" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnBladeT0BoneKnife"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnBladeT1HuntingKnife"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="meleeWpnBladeT3Machete"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingClubs -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']">
+		<crafting_skill name="craftingClubs" max_level="75" parent="attCrafting" name_key="craftingClubsName" desc_key="craftingClubsDesc" long_desc_key="craftingClubsLongDesc" icon="ui_game_symbol_club">
+
+			<display_entry icon="meleeWpnClubT0WoodenClub" name_key="meleeWpnClubT0WoodenClub" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeWpnClubT0WoodenClub" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnClubT1BaseballBat" name_key="meleeWpnClubT1BaseballBat" has_quality="false" unlock_level="30" >
+				<unlock_entry item="meleeWpnClubT1BaseballBat" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnClubT3SteelClub" name_key="meleeWpnClubT3SteelClub" has_quality="false" unlock_level="75" >
+				<unlock_entry item="meleeWpnClubT3SteelClub" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnClubT0WoodenClub"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnClubT1BaseballBat"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="meleeWpnClubT3SteelClub"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingSledgehammers -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']">
+		<crafting_skill name="craftingSledgehammers" max_level="75" parent="attCrafting" name_key="craftingSledgehammersName" desc_key="craftingSledgehammersDesc" long_desc_key="craftingSledgehammersLongDesc" icon="ui_game_symbol_sledge">
+
+			<display_entry icon="meleeWpnSledgeT0StoneSledgehammer" name_key="meleeWpnSledgeT0StoneSledgehammer" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeWpnSledgeT0StoneSledgehammer" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnSledgeT1IronSledgehammer" name_key="meleeWpnSledgeT1IronSledgehammer" has_quality="false" unlock_level="30" >
+				<unlock_entry item="meleeWpnSledgeT1IronSledgehammer" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnSledgeT3SteelSledgehammer" name_key="meleeWpnSledgeT3SteelSledgehammer" has_quality="false" unlock_level="75" >
+				<unlock_entry item="meleeWpnSledgeT3SteelSledgehammer" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnSledgeT0StoneSledgehammer"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnSledgeT1IronSledgehammer"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="meleeWpnSledgeT3SteelSledgehammer"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingBows -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']">
+		<crafting_skill name="craftingBows" max_level="100" parent="attCrafting" name_key="craftingBowsName" desc_key="craftingBowsDesc" long_desc_key="craftingBowsLongDesc" icon="ui_game_symbol_archery">
+
+			<display_entry icon="gunBowT0PrimitiveBow" name_key="gunBowT0PrimitiveBow" has_quality="false" unlock_level="1" >
+				<unlock_entry item="gunBowT0PrimitiveBow" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBowT1WoodenBow" name_key="gunBowT1WoodenBow" has_quality="false" unlock_level="25" >
+				<unlock_entry item="gunBowT1WoodenBow" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBowT1IronCrossbow" name_key="gunBowT1IronCrossbow" has_quality="false" unlock_level="50" >
+				<unlock_entry item="gunBowT1IronCrossbow" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBowT3CompoundBow" name_key="gunBowT3CompoundBow" has_quality="false" unlock_level="75" >
+				<unlock_entry item="gunBowT3CompoundBow" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBowT3CompoundCrossbow" name_key="gunBowT3CompoundCrossbow" has_quality="false" unlock_level="100" >
+				<unlock_entry item="gunBowT3CompoundCrossbow" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunBowT0PrimitiveBow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="gunBowT1WoodenBow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="gunBowT1IronCrossbow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="gunBowT3CompoundBow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="gunBowT3CompoundCrossbow"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingSpears -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']">
+		<crafting_skill name="craftingSpears" max_level="75" parent="attCrafting" name_key="craftingSpearsName" desc_key="craftingSpearsDesc" long_desc_key="craftingSpearsLongDesc" icon="ui_game_symbol_spear">
+
+			<display_entry icon="meleeWpnSpearT0StoneSpear" name_key="meleeWpnSpearT0StoneSpear" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeWpnSpearT0StoneSpear" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnSpearT1IronSpear" name_key="meleeWpnSpearT1IronSpear" has_quality="false" unlock_level="30" >
+				<unlock_entry item="meleeWpnSpearT1IronSpear" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnSpearT3SteelSpear" name_key="meleeWpnSpearT3SteelSpear" has_quality="false" unlock_level="75" >
+				<unlock_entry item="meleeWpnSpearT3SteelSpear" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnSpearT0StoneSpear"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnSpearT1IronSpear"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="meleeWpnSpearT3SteelSpear"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingHandguns -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']">
+		<crafting_skill name="craftingHandguns" max_level="100" parent="attCrafting" name_key="craftingHandgunsName" desc_key="craftingHandgunsDesc" long_desc_key="craftingHandgunsLongDesc" icon="ui_game_symbol_pistol">
+
+			<display_entry icon="gunHandgunT0PipePistol" name_key="gunHandgunT0PipePistol" has_quality="false" unlock_level="1" >
+				<unlock_entry item="gunHandgunT0PipePistol" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunHandgunT1Pistol" name_key="gunHandgunT1Pistol" has_quality="false" unlock_level="25" >
+				<unlock_entry item="gunHandgunT1Pistol" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunHandgunT2Magnum44" name_key="gunHandgunT2Magnum44" has_quality="false" unlock_level="50" >
+				<unlock_entry item="gunHandgunT2Magnum44" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunHandgunT3SMG5" name_key="gunHandgunT3SMG5" has_quality="false" unlock_level="75" >
+				<unlock_entry item="gunHandgunT3SMG5" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunHandgunT3DesertVulture" name_key="gunHandgunT3DesertVulture" has_quality="false" unlock_level="100" >
+				<unlock_entry item="gunHandgunT3DesertVulture" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunHandgunT0PipePistol"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="gunHandgunT1Pistol"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="gunHandgunT2Magnum44"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="gunHandgunT3SMG5"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="gunHandgunT3DesertVulture"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingShotguns -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']">
+		<crafting_skill name="craftingShotguns" max_level="100" parent="attCrafting" name_key="craftingShotgunsName" desc_key="craftingShotgunsDesc" long_desc_key="craftingShotgunsLongDesc" icon="ui_game_symbol_shotgun">
+
+			<display_entry icon="gunShotgunT0PipeShotgun" name_key="gunShotgunT0PipeShotgun" has_quality="false" unlock_level="1" >
+				<unlock_entry item="gunShotgunT0PipeShotgun" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunShotgunT1DoubleBarrel" name_key="gunShotgunT1DoubleBarrel" has_quality="false" unlock_level="35" >
+				<unlock_entry item="gunShotgunT1DoubleBarrel" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunShotgunT2PumpShotgun" name_key="gunShotgunT2PumpShotgun" has_quality="false" unlock_level="70" >
+				<unlock_entry item="gunShotgunT2PumpShotgun" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunShotgunT3AutoShotgun" name_key="gunShotgunT3AutoShotgun" has_quality="false" unlock_level="100" >
+				<unlock_entry item="gunShotgunT3AutoShotgun" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunShotgunT0PipeShotgun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="gunShotgunT1DoubleBarrel"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="gunShotgunT2PumpShotgun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="gunShotgunT3AutoShotgun"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingRifles -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']">
+		<crafting_skill name="craftingRifles" max_level="100" parent="attCrafting" name_key="craftingRiflesName" desc_key="craftingRiflesDesc" long_desc_key="craftingRiflesLongDesc" icon="ui_game_symbol_long_shot">
+
+			<display_entry icon="gunRifleT0PipeRifle" name_key="gunRifleT0PipeRifle" has_quality="false" unlock_level="1" >
+				<unlock_entry item="gunRifleT0PipeRifle" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunRifleT1HuntingRifle" name_key="gunRifleT1HuntingRifle" has_quality="false" unlock_level="35" >
+				<unlock_entry item="gunRifleT1HuntingRifle" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunRifleT2LeverActionRifle" name_key="gunRifleT2LeverActionRifle" has_quality="false" unlock_level="70" >
+				<unlock_entry item="gunRifleT2LeverActionRifle" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunRifleT3SniperRifle" name_key="gunRifleT3SniperRifle" has_quality="false" unlock_level="100" >
+				<unlock_entry item="gunRifleT3SniperRifle" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunRifleT0PipeRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="gunRifleT1HuntingRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="gunRifleT2LeverActionRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="gunRifleT3SniperRifle"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingMachineGuns -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']">
+		<crafting_skill name="craftingMachineGuns" max_level="100" parent="attCrafting" name_key="craftingMachineGunsName" desc_key="craftingMachineGunsDesc" long_desc_key="craftingMachineGunsLongDesc" icon="ui_game_symbol_rifle">
+
+			<display_entry icon="gunMGT0PipeMachineGun" name_key="gunMGT0PipeMachineGun" has_quality="false" unlock_level="1" >
+				<unlock_entry item="gunMGT0PipeMachineGun" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunMGT1AK47" name_key="gunMGT1AK47" has_quality="false" unlock_level="35" >
+				<unlock_entry item="gunMGT1AK47" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunMGT2TacticalAR" name_key="gunMGT2TacticalAR" has_quality="false" unlock_level="70" >
+				<unlock_entry item="gunMGT2TacticalAR" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunMGT3M60" name_key="gunMGT3M60" has_quality="false" unlock_level="100" >
+				<unlock_entry item="gunMGT3M60" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunMGT0PipeMachineGun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="gunMGT1AK47"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="gunMGT2TacticalAR"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="gunMGT3M60"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingExplosives -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@name='CraftingTier']" />
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT5']/@unlock_level">100</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@level='55,100']/@level">100,100</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/@has_quality">false</set>
+
+
+	<!-- craftingRobotics -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']">
+		<crafting_skill name="craftingRobotics" max_level="100" parent="attCrafting" name_key="craftingRoboticsName" desc_key="craftingRoboticsDesc" long_desc_key="craftingRoboticsLongDesc" icon="ui_game_symbol_junk_turret">
+
+			<display_entry icon="meleeWpnBatonT0PipeBaton" name_key="meleeWpnBatonT0PipeBaton" has_quality="false" unlock_level="1" >
+				<unlock_entry item="meleeWpnBatonT0PipeBaton" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBotT1JunkSledge" name_key="gunBotT1JunkSledge" has_quality="false" unlock_level="25" >
+				<unlock_entry item="gunBotT1JunkSledge" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="meleeWpnBatonT2StunBaton" name_key="meleeWpnBatonT2StunBaton" has_quality="false" unlock_level="50" >
+				<unlock_entry item="meleeWpnBatonT2StunBaton" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBotT2JunkTurret" name_key="gunBotT2JunkTurret" has_quality="false" unlock_level="75" >
+				<unlock_entry item="gunBotT2JunkTurret" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="gunBotT3JunkDrone" name_key="gunBotT3JunkDrone" has_quality="false" unlock_level="100" >
+				<unlock_entry item="gunBotT3JunkDrone" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="meleeWpnBatonT0PipeBaton"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="gunBotT1JunkSledge"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="meleeWpnBatonT2StunBaton"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="gunBotT2JunkTurret"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="gunBotT3JunkDrone"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+	<!-- craftingArmor -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']" />
+	<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']">
+		<crafting_skill name="craftingArmor" max_level="75" parent="attCrafting" name_key="craftingArmorName" desc_key="craftingArmorDesc" long_desc_key="craftingArmorLongDesc" icon="ui_game_symbol_armor_iron">
+
+			<display_entry icon="resourceCloth" name_key="armorT1" has_quality="false" unlock_level="1">
+				<unlock_entry item="armorClothMaster,armorScrapMaster" unlock_tier="1" recipes="armorClothHat,armorClothJacket,armorClothGloves,armorClothPants,armorClothBoots,armorScrapMaster,armorScrapHelmet,armorScrapChest,armorScrapGloves,armorScrapLegs,armorScrapBoots" />
+			</display_entry>
+			<display_entry icon="resourceLeather" name_key="armorT2" has_quality="false" unlock_level="30" >
+				<unlock_entry item="armorLeatherMaster,armorIronMaster" unlock_tier="1" recipes="armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorIronMaster,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots" />
+			</display_entry>
+			<display_entry icon="resourceForgedIron" name_key="armorT3" has_quality="false" unlock_level="75" >
+				<unlock_entry item="armorMilitaryMaster,armorSteelMaster,resourceMilitaryFiber" unlock_tier="1" recipes="armorMilitaryHelmet,armorMilitaryVest,armorMilitaryGloves,armorMilitaryLegs,armorMilitaryBoots,armorSteelMaster,armorSteelHelmet,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelBoots,resourceMilitaryFiber" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="armorClothMaster,armorClothHat,armorClothJacket,armorClothGloves,armorClothPants,armorClothBoots,armorScrapMaster,armorScrapHelmet,armorScrapChest,armorScrapGloves,armorScrapLegs,armorScrapBoots"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="armorLeatherMaster,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorIronMaster,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,75" value="1" tags="armorMilitaryMaster,armorMilitaryHelmet,armorMilitaryVest,armorMilitaryGloves,armorMilitaryLegs,armorMilitaryBoots,armorSteelMaster,armorSteelHelmet,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelBoots,resourceMilitaryFiber"/>
+			</effect_group>
+		</crafting_skill>
+	</insertBefore>
+
+
+
+	<!-- Action Skills -->
 	<append xpath="/progression/attributes">
 		<attribute name="attActionSkills" name_key="attActionSkillsName" desc_key="attActionSkillsDesc" max_level="1" icon="ui_game_symbol_resource">
 			<effect_group name="Action Skills Lvl 0 Set">
@@ -33,7 +441,7 @@
 				<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="Equals" value="0"/>
 				<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
 				<requirement name="CVarCompare" cvar="AS_Automatics_XP" operation="Equals" value="0"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_XP_Mult" operation="set" value="1.015"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_XP_Mult" operation="set" value="1.020"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ConstructionTools_LvlNextAdd" operation="set" value="700"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ConstructionTools_LvlNextTotal" operation="set" value="700"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MiningTools_LvlNextAdd" operation="set" value="700"/>
@@ -77,9 +485,9 @@
 		<!-- Tools -->
 		<perk name="perkASMiningTools" parent="skillASTools" max_level="100" base_skill_point_cost="0" name_key="Mining Tools" desc_key="perkASMiningToolsDesc" icon="ui_game_symbol_mining">
 			<effect_group>
-				<passive_effect name="BlockDamage" operation="perc_add" value="0.01,1" level="1,100"/>
-				<passive_effect name="HarvestCount" operation="perc_add" value="0.01,1" level="1,100" tags="oreWoodHarvest"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<!--<passive_effect name="BlockDamage" operation="perc_add" value="0.01,1" level="1,100"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.01,1" level="1,100" tags="oreWoodHarvest"/>-->
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Mining Tools Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_MiningTools_Lvl" operation="LT" value="100"/>
@@ -97,9 +505,9 @@
 		<!-- Tools -->
 		<perk name="perkASConstructionTools" parent="skillASTools" max_level="100" base_skill_point_cost="0" name_key="Construction Tools" desc_key="perkASConstructionToolsDesc" icon="ui_game_symbol_block_repair">
 			<effect_group>
-				<passive_effect name="BlockDamage" operation="perc_add" value="0.01,1" level="1,100"/>
-				<passive_effect name="HarvestCount" operation="perc_add" value="0.01,1" level="1,100" tags="oreWoodHarvest"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<!--<passive_effect name="BlockDamage" operation="perc_add" value="0.01,1" level="1,100"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.01,1" level="1,100" tags="oreWoodHarvest"/>-->
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Construction Tools Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_ConstructionTools_Lvl" operation="LT" value="100"/>
@@ -110,7 +518,7 @@
 				<triggered_effect trigger="onSelfHarvestBlock" action="ShowToolbeltMessage" message="Construction Tools Level Increased to @AS_ConstructionTools_Lvl"/>
 			</effect_group>
 			<effect_group name="Craft Construction Weapons Skill Increase">
-				<passive_effect name="CraftingTier" operation="base_add" level="1,100" value="1,900" tags="meleeToolRepairT5NailgunRH,Dane,BattleAxe,CorpseMaker,meleeToolRepairT0StoneAxe,meleeToolRepairT0TazasStoneAxe,meleeToolRepairT1ClawHammer,meleeToolRepairT3Nailgun,meleeToolAxeT1IronFireaxe,meleeToolAxeT2SteelAxe,meleeToolAxeT3Chainsaw,meleeToolSalvageT1Wrench,meleeToolSalvageT2Ratchet,meleeToolSalvageT3ImpactDriver,vehicleMinibikeChassis,vehicleMotorcycleChassis,vehicle4x4TruckChassis,vehicleGyroCopterChassis,batterybank,carBattery,armorSteelHelmet,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable,armorSantaHat,apparelOveralls,apparelCowboyHat,apparelFlannelShirt,apparelTankTop,apparelHoodySweatshirt,apparelSweatshirt,apparelPressboyCap,apparelBallCap,apparelSkullCap,apparelArmyShirt,apparelDenimShortsPants,apparelSkirt,apparelArmyPants,apparelDenimPants,apparelSuitDressShoes,apparelSuitPants,apparelBandana,apparelSuitJacket,apparelTShirtPlain,apparelTShirtZU,apparelLongShirt,apparelSweatshirt,apparelWornBoots,apparelRunningShoesRegular,apparelRunningShoesHP,apparelCowboyBoots,apparelShades,apparelSkiGoggles,apparelNerdGlasses,apparelNightvisionGoggles,apparelAviatorGoggles,armorFootballHelmet,apparelCoatLeatherDuster,apparelCoatPufferCoat,apparelCoatLeatherPoncho,apparelCoatJacketGeneric,apparelCoatJacketLetterZU,apparelGothBoots,apparelGothPants,apparelGhillieSuitHood,apparelGhillieSuitPants,apparelGhillieSuitJacket,armorClothPants,armorClothJacket,armorClothBoots,armorClothGloves,armorClothHat,armorLeatherBoots,armorLeatherPants,armorLeatherChest,armorLeatherGloves,armorLeatherHood,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryBoots,armorMilitaryLegs,armorMilitaryVest,armorMilitaryStealthBoots,armorScrapHelmet,armorScrapChest,armorScrapGloves,armorScrapLegs,armorScrapBoots,armorIronGloves,armorIronHelmet,armorIronBoots,armorIronLegs,armorIronChest,armorSteelBoots,armorSteelLegs,armorSteelChest,armorSteelGloves,armorMilitaryHelmet,armorSwatHelmet,apparelGasMask,apparelHazmatPants,apparelHazmatBoots,apparelHazmatJacket,apparelHazmatGloves,apparelHazmatMask,armorMiningHelmet,armorFirefightersHelmet,smallEngine"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="1,100" value="1,900" tags="meleeToolRepairT0StoneAxe,meleeToolRepairT0TazasStoneAxe,meleeToolRepairT1ClawHammer,meleeToolRepairT3Nailgun,meleeToolAxeT1IronFireaxe,meleeToolAxeT2SteelAxe,meleeToolAxeT3Chainsaw,meleeToolSalvageT1Wrench,meleeToolSalvageT2Ratchet,meleeToolSalvageT3ImpactDriver,vehicleMinibikeChassis,vehicleMotorcycleChassis,vehicle4x4TruckChassis,vehicleGyroCopterChassis,batterybank,carBattery,armorSteelHelmet,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable,armorSantaHat,apparelOveralls,apparelCowboyHat,apparelFlannelShirt,apparelTankTop,apparelHoodySweatshirt,apparelSweatshirt,apparelPressboyCap,apparelBallCap,apparelSkullCap,apparelArmyShirt,apparelDenimShortsPants,apparelSkirt,apparelArmyPants,apparelDenimPants,apparelSuitDressShoes,apparelSuitPants,apparelBandana,apparelSuitJacket,apparelTShirtPlain,apparelTShirtZU,apparelLongShirt,apparelSweatshirt,apparelWornBoots,apparelRunningShoesRegular,apparelRunningShoesHP,apparelCowboyBoots,apparelShades,apparelSkiGoggles,apparelNerdGlasses,apparelNightvisionGoggles,apparelAviatorGoggles,armorFootballHelmet,apparelCoatLeatherDuster,apparelCoatPufferCoat,apparelCoatLeatherPoncho,apparelCoatJacketGeneric,apparelCoatJacketLetterZU,apparelGothBoots,apparelGothPants,apparelGhillieSuitHood,apparelGhillieSuitPants,apparelGhillieSuitJacket,armorClothPants,armorClothJacket,armorClothBoots,armorClothGloves,armorClothHat,armorLeatherBoots,armorLeatherPants,armorLeatherChest,armorLeatherGloves,armorLeatherHood,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryBoots,armorMilitaryLegs,armorMilitaryVest,armorMilitaryStealthBoots,armorScrapHelmet,armorScrapChest,armorScrapGloves,armorScrapLegs,armorScrapBoots,armorIronGloves,armorIronHelmet,armorIronBoots,armorIronLegs,armorIronChest,armorSteelBoots,armorSteelLegs,armorSteelChest,armorSteelGloves,armorMilitaryHelmet,armorSwatHelmet,apparelGasMask,apparelHazmatPants,apparelHazmatBoots,apparelHazmatJacket,apparelHazmatGloves,apparelHazmatMask,armorMiningHelmet,armorFirefightersHelmet,smallEngine"/>
 			</effect_group>
 		</perk>
 
@@ -118,8 +526,8 @@
 		<perk name="perkASBlunt" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Blunt Weapons" desc_key="perkASBluntDesc" icon="ui_game_symbol_sledge">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="blunt"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Blunt Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Blunt_Lvl" operation="LT" value="100"/>
@@ -138,8 +546,8 @@
 		<perk name="perkASBladed" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Bladed Weapons" desc_key="perkASBladedDesc" icon="ui_game_symbol_deep_cuts">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkDeepCuts"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Bladed Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Bladed_Lvl" operation="LT" value="100"/>
@@ -158,8 +566,8 @@
 		<perk name="perkASElectric" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Electric Weapons" desc_key="perkASElectricDesc" icon="ui_game_symbol_electric_power">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkElectrocutioner"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Electric Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Electric_Lvl" operation="LT" value="100"/>
@@ -178,16 +586,16 @@
 		<perk name="perkASTurret" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Turret Weapons" desc_key="perkASTurretDesc" icon="ui_game_symbol_electric_turret">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkTurrets"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<!--<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.2" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Turret Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Turret_Lvl" operation="LT" value="100"/>
@@ -206,8 +614,8 @@
 		<perk name="perkASJavelin" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Javelin Weapons" desc_key="perkASJavelinDesc" icon="ui_game_symbol_spear">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkJavelinMaster"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Javelin Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Javelin_Lvl" operation="LT" value="100"/>
@@ -226,8 +634,8 @@
 		<perk name="perkASBrawler" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Fist Weapons" desc_key="perkASBrawlerDesc" icon="ui_game_symbol_boxer">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.3" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.003,0.1" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Brawler Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Brawler_Lvl" operation="LT" value="100"/>
@@ -246,11 +654,11 @@
 		<perk name="perkASArchery" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Archery Weapons" desc_key="perkASArcheryDesc" icon="ui_game_symbol_archery">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkArchery"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<!--<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.2" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Archery Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Archery_Lvl" operation="LT" value="100"/>
@@ -269,16 +677,16 @@
 		<perk name="perkASPistols" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Pistol Weapons" desc_key="perkASPistolsDesc" icon="ui_game_symbol_gunslinger">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkGunslinger"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<!--<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.2" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Pistols Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Pistols_Lvl" operation="LT" value="100"/>
@@ -297,16 +705,16 @@
 		<perk name="perkASShotguns" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Shotgun Weapons" desc_key="perkASShotgunsDesc" icon="ui_game_symbol_shotgun">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkBoomstick"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<!--<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.2" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Shotguns Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Shotguns_Lvl" operation="LT" value="100"/>
@@ -325,16 +733,16 @@
 		<perk name="perkASRifles" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Rifle Weapons" desc_key="perkASRiflesDesc" icon="ui_game_symbol_map_cursor">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkDeadEye"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<!--<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.2" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Rifles Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Rifles_Lvl" operation="LT" value="100"/>
@@ -353,16 +761,16 @@
 		<perk name="perkASAutomatics" parent="skillASWeapons" max_level="100" base_skill_point_cost="0" name_key="Automatic Weapons" desc_key="perkASAutomaticsDesc" icon="ui_game_symbol_rifle">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.3" level="1,100"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.003,0.1" level="1,100"/>
+				<!--<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesVerticalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.5" level="1,100"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value="0.005,0.5" level="1,100"/>-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.005,0.2" level="1,100"/>
 			</effect_group>
 			<effect_group name="AS Automatics Lvl Increase">
 				<requirement name="CVarCompare" cvar="AS_Automatics_Lvl" operation="LT" value="100"/>

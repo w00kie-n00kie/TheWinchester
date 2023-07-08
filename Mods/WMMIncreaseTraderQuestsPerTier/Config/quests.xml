@@ -1,3 +1,3 @@
 ﻿<quests>
-	<set xpath="/quests/@quests_per_tier">10</set>
+	<set xpath="/quests/@quests_per_tier">15</set>
 </quests>

@@ -14,8 +14,8 @@
 	<set xpath="/recipes/recipe[@tags='learnable,perkArchery']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='learnable,perkTurrets']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='learnable,perkPummelPete']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
-	<set xpath="/recipes/recipe[@tags='learnable,perkMiner69r']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
-	<set xpath="/recipes/recipe[@tags='learnable,perkJavelinMaster']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
+	<set xpath="/recipes/recipe[@tags='learnable,perkMiner69r,craftingHarvestingTools']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
+	<set xpath="/recipes/recipe[@tags='learnable,perkJavelinMaster,craftingSpears']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='learnable,perkDeepCuts']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='learnable,perkSkullCrusher']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='perkElectrocutioner']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>

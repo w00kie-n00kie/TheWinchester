@@ -1,4 +1,4 @@
 ﻿<loot>
-  <set xpath="/lootcontainers/lootcontainer[@id='34']/@destroy_on_close">false</set>
-  <setattribute xpath="/lootcontainers/lootcontainer[@id='34']" name="open_time">15</setattribute>  
+  <set xpath="/lootcontainers/lootcontainer[@name='airDrop']/@destroy_on_close">false</set>
+  <setattribute xpath="/lootcontainers/lootcontainer[@name='airDrop']" name="open_time">15</setattribute>  
 </loot>

@@ -1,3 +1,0 @@
-﻿<windows>
-  <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>
-</windows>
