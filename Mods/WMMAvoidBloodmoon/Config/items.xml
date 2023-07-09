@@ -3,8 +3,8 @@
 		<item name="drugAvoidBloodmoon">
 			<property name="Tags" value="medical"/>
 			<property name="HoldType" value="16"/>
-			<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Stacknumber" value="10"/>
 			<property name="DisplayType" value="drugAvoidBloodmoon"/>
