@@ -22,4 +22,8 @@
 	<set xpath="/recipes/recipe[@tags='learnable,perkElectrocutioner']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='learnable,perkSalvageOperations']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 	<set xpath="/recipes/recipe[@tags='learnable,perkBrawler']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
+	<set xpath="/recipes/recipe[@tags='perkLightArmor']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
+	<set xpath="/recipes/recipe[@tags='learnable,chemStationCrafting']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
+	<set xpath="/recipes/recipe[@tags='learnable,workbenchCrafting']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
+	<set xpath="/recipes/recipe[@tags='learnable,craftingHarvestingTools']/effect_group/passive_effect[@name='CraftingIngredientCount']/@level">200,901</set>
 </config>

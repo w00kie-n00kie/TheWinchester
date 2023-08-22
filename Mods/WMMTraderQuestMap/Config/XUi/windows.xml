@@ -1,0 +1,146 @@
+﻿<windows>
+
+	<insertAfter xpath="/windows/window[@name='mapArea']" >
+		<window name="mapAreaTrader" width="718" height="770" pos="-200,400" controller="XUiC_WMMMapArea, WMMTraderQuestMap" cursor_area="true" >
+			<panel name="header" pos="3,0" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+				<sprite depth="1" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_map"/>
+				<label style="header.name" text="Trader Quest Map"/>
+				<button depth="1" name="switchStaticMap" style="icon32px, press, hover" pivot="center" pos="690, -21" sprite="ui_game_symbol_electric_switch" tooltip_key="lblSwitchStaticMap" sound="[paging_click]" />
+				<combobox name="cbxStaticMapType" type="ComboBoxEnum`1[XUiC_MapArea+EStaticMapOverlay]" value_wrap="true" localization_prefix="xuiStaticMapType" pos="460,-6" width="210" height="30" />
+			</panel>
+
+			<panel name="content" depth="0" pos="0,-43" height="770" disableautobackground="true">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="3,-3" width="718" height="761" color="[black]" type="sliced" fillcenter="false" />
+				<rect depth="1" name="toolbar" width="712" height="43" pos="6,-6">
+					<sprite color="[lightGrey]" type="sliced" />
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,2" width="718" height="47" color="[black]" type="sliced" fillcenter="false" />
+					<button depth="1" name="playerIcon" style="icon32px, press, hover" pivot="center" pos="20,-21" sprite="ui_game_symbol_map_player_arrow" tooltip="Center on Player" tooltip_key="lblCenterOnPlayer" sound="[paging_click]" />
+					<label depth="1" name="playerPos" pos="40,-12" width="150" height="28" text="110 S 769 W" font_size="26"/>
+
+					<button depth="1" name="bedrollIcon" style="icon32px, press, hover" pivot="center" pos="216,-21" sprite="ui_game_symbol_map_bed" tooltip="Center on Sleeping Bag" tooltip_key="lblCenterOnSleepingBag" sound="[paging_click]" />
+					<label depth="1" name="bedrollPos" pos="236,-12" width="150" height="28" text="300 N 832 W" font_size="26"/>
+
+					<sprite depth="1" name="cursorIcon" style="icon32px, press, hover" pos="390,-5" sprite="ui_game_symbol_map_cursor" tooltip="Cursor Position" tooltip_key="lblCursorPosition" sound="[paging_click]"/>
+					<label depth="1" name="cursorPos" pos="428,-12" width="130" height="28" text="300 N 832 W" font_size="26"/>
+
+					<button depth="1" name="waypointIcon" style="icon32px, hover" pivot="center" on_press="true" pos="578,-21" sprite="ui_game_symbol_map_waypoint_remove" tooltip="Remove Quick Waypoint" tooltip_key="lblRemoveQuickWaypoint" />
+					<label depth="1" name="waypointDistance" pos="586,-12" width="122" height="28" text="0.2 KILOMETERS" font_size="26" />
+				</rect>
+				<panel name="mapView" depth="1" width="712" height="712" pos="6,-49" disableautobackground="true" on_drag="true" style="press, scroll, hover" sound="[craft_click]" snap="false">
+					<sprite depth="1" name="backgroundMain" sprite="menu_empty" color="[black]" type="sliced" fillcenter="true" globalopacity="false" />
+					<texture depth="2" name="mapViewTexture" width="712" height="712" pos="0,0" material="Materials/MaskableMainmap"/>
+					<panel name="clippingPanel" depth="4" width="712" height="712" pos="0,0" disableautobackground="true" createuipanel="true" clipping="SoftClip" clippingsoftness="4,4" clippingsize="712,712" clippingcenter="356,-356" />
+
+
+					<panel name="tier1panel">
+						<rect depth="3" pos="10,-5" width="55" height="31">
+							<button name="tier1Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier1" pos="0,-2" justify="center" text="T1" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier2panel">
+						<rect depth="3" pos="70,-5" width="55" height="31">
+							<button name="tier2Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier2" pos="0,-2" justify="center" text="T2" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier3panel">
+						<rect depth="3" pos="130,-5" width="55" height="31">
+							<button name="tier3Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier3" pos="0,-2" justify="center" text="T3" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier4panel">
+						<rect depth="3" pos="190,-5" width="55" height="31">
+							<button name="tier4Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier4" pos="0,-2" justify="center" text="T4" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier5panel">
+						<rect depth="3" pos="250,-5" width="55" height="31">
+							<button name="tier5Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier5" pos="0,-2" justify="center" text="T5" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier6panel">
+						<rect depth="3" pos="310,-5" width="55" height="31">
+							<button name="tier6Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier6" pos="0,-2" justify="center" text="T6" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier7panel">
+						<rect depth="3" pos="370,-5" width="55" height="31">
+							<button name="tier7Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier7" pos="0,-2" justify="center" text="T7" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier8panel">
+						<rect depth="3" pos="430,-5" width="55" height="31">
+							<button name="tier8Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier8" pos="0,-2" justify="center" text="T8" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier9panel">
+						<rect depth="3" pos="490,-5" width="55" height="31">
+							<button name="tier9Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier9" pos="0,-2" justify="center" text="T9" effect="outline" />
+						</rect>
+					</panel>
+					<panel name="tier10panel">
+						<rect depth="3" pos="550,-5" width="55" height="31">
+							<button name="tier10Button" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" selectedsprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label depth="2" name="tier10" pos="0,-2" justify="center" text="T10" effect="outline" />
+						</rect>
+					</panel>
+				</panel>
+			</panel>
+		</window>
+	</insertAfter>
+
+	<insertAfter xpath="/windows/window[@name='mapArea']" >
+		<window name="mapTraderQuests" width="354" height="513" pos="-564,400" controller="XUiC_WMMMapTraderQuests, WMMTraderQuestMap" cursor_area="true" >
+
+			<panel name="header" pos="3,0" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+				<sprite depth="1" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_map_waypoint_set"/>
+				<label style="header.name" text="Quests" text_key="xuiQuests" />
+			</panel>
+
+			<rect name="content" depth="0" pos="0,-43" height="464">
+				<rect depth="3" name="searchControls" width="348" height="43" pos="6,-9">
+					<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="354" height="46" color="[black]" type="sliced" fillcenter="false" />
+					<sprite color="[darkGrey]" type="sliced" width="350" pos="-1,0" />
+					<label style="header.name" text="Tier" text_key="xuiTier" pos="207,-5"/>
+					<panel pos="248,0" width="104" height="43" disableautobackground="true">
+						<pager name="pager" pos="4,-6" />
+					</panel>
+				</rect>
+
+				<grid name="traderQuestList" rows="5" cols="1" pos="6,-52" width="348" height="368" cell_width="390" cell_height="46" controller="XUiC_WMMMapTraderQuestList, WMMTraderQuestMap" repeat_content="true" arrangement="vertical" normal_color="[iconColor]" disabled_color="[iconColor]" >
+					<quest_waypoint_entry name="0" />
+				</grid>
+			</rect>
+
+			<panel name="header" height="43"  pos="2,-350" depth="1" backgroundspritename="ui_game_panel_header" >
+				<sprite pos="4,-5" depth="2" name="windowIcon" style="icon32px" sprite="ui_game_symbol_quest"/>
+				<label style="header.name" name="questname" text="{questname}" width="450" font_size="28" pos="35,-9"/>
+				<label depth="2" pos="245,-10" width="100" height="28" name="questdifficulty" text="{questdifficulty}" justify="right" upper_case="true" font_size="24" />
+			</panel>
+			<panel name="content" pos="2,-392" height="329" depth="1" backgroundcolor="[darkGrey]" bordercolor="[black]" borderthickness="3" pivot="center">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="354" height="329" color="[black]" type="sliced" fillcenter="false" />
+				<label depth="3" name="descriptionText" pos="6,-5" text="{questoffer}" width="342" height="320" font_size="28" />
+			</panel>
+
+			<rect name="btnAccept" depth="3" pos="2, -718" height="36" disableautobackground="true">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="355" />
+				<sprite depth="2" name="background" pos="3,-3" sprite="menu_empty" width="276" height="32" color="[darkGrey]" type="sliced" />
+				<rect depth="3" pos="0,-3" width="355" height="31">
+					<button name="clickable" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+
+					<sprite depth="2" name="windowIcon" width="24" height="24" pos="45,-2" color="[iconColor]" sprite="ui_game_symbol_check"/>
+					<label depth="2" name="windowName" pos="0,-2" justify="center" text="ACCEPT" text_key="xuiAccept" effect="outline" />
+				</rect>
+			</rect>
+		</window>
+	</insertAfter>
+
+</windows>

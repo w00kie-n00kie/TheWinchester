@@ -1,0 +1,6 @@
+﻿<controls>
+
+	<setattribute xpath="/controls/gameoption" name="default_value">default_value</setattribute>
+	<setattribute xpath="/controls/gameoption/rect" name="default_value">${default_value}</setattribute>
+
+</controls>

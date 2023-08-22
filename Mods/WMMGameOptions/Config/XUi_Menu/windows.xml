@@ -1,0 +1,27 @@
+﻿<windows>
+  <!-- Game Options-->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cell_width">117</set>
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cols">5</set>
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/simplebutton/@width">116</set>
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/simplebutton/@font_size">24</set>
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/sprite/@pos">115,0</set>
+
+  <insertAfter xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']" >
+    <rect tab_key="xuiWinchester">
+      <grid pos="6,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
+        <gameoption name="MaxSpawnedZombies" title="goMaxSpawnedZombies" value_wrap="false" value_type="int" values="0, 10, 30, 60, 64, 100, 125, 150, 175, 200" display_names="" value_localization_prefix="" />
+		<gameoption name="CustomCityZombieMultiplier" title="goCityZombieMultiplier" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
+		<gameoption name="CustomBiomeRespawnDelay" title="goBiomeRespawnDelay" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
+		<gameoption name="CustomHeadShotOnly" title="goHeadShotOnly" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="false" />
+		<gameoption name="CustomZombieRage" title="goZombieRage" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true"  />
+		<gameoption name="CustomWanderingHordeFrequency" title="goWanderingHordeFrequency" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5" display_names="goWanderingHordeFrequency1,goWanderingHordeFrequency2,goWanderingHordeFrequency3,goWanderingHordeFrequency4,goWanderingHordeFrequency5,goWanderingHordeFrequency6" value_localization_prefix="" default_value="0"  />
+		<gameoption name="CustomWanderingHordeMultiplier" title="goWanderingHordeMultiplier" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="goLandClaimOnlineDurabilityModifierValue" default_value="1" />
+		<gameoption name="CustomHeatMap" title="goHeatMap" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200" display_names="" value_localization_prefix="" default_value="100" />
+		<gameoption name="CustomTraderSellPriceMultiplier" title="goTraderSellPriceMultiplier" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5" display_names="" value_localization_prefix="goLandClaimOnlineDurabilityModifierValue" default_value="1" />
+		<gameoption name="CustomTraderQuestsPerTier" title="goTraderQuestsPerTier" value_wrap="false" value_type="int" values="5, 7, 10, 15, 20, 30" display_names="" value_localization_prefix="" default_value="10" />
+		<gameoption name="CustomItemsDegradeOnRepair" title="goItemsDegradeOnRepair" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true" />
+	  </grid>
+    </rect>
+  </insertAfter>
+
+</windows>

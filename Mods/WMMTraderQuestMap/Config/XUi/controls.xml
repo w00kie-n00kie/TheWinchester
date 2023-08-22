@@ -1,0 +1,13 @@
+﻿<controls>
+	<insertAfter xpath="/controls/waypoint_entry" >
+		<quest_waypoint_entry>
+			<rect width="348" height="43" pos="6,-98" controller="XUiC_WMMMapWaypointListEntry, WMMTraderQuestMap" >
+				<sprite depth="3" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="354" height="49" color="[black]" type="sliced" fillcenter="false" />
+				<sprite depth="1" name="background" pos="-1,1" height="45" width="350" color="[darkGrey]" type="sliced" on_hover="true" style="press,scroll" sound="[recipe_click]" sound_play_on_hover="[default_hover]" />
+				<sprite depth="4" name="Icon" sprite="ui_game_symbol_quest" style="icon32px" pos="8,-3" foregroundlayer="true"/>
+				<label depth="4" name="Name" pos="145,-20" width="180" height="30" text="Name" font_size="28" justify="center" pivot="center"/>
+				<label depth="4" name="Distance" pos="292,-20" width="80" height="30" text="0.7KM" font_size="28" justify="center" pivot="center"/>
+			</rect>
+		</quest_waypoint_entry>
+	</insertAfter>
+</controls>

@@ -1,4 +1,5 @@
 <windows>
 	<!-- Increase bag size from 45 to 54, i.e. change rows from 5 to 6 -->
-	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid/@rows">6</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid/@rows">7</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid/@cols">9</set>
 </windows>

@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-  <ModInfo>
-    <Name value="WMMZAirdropSpawnZeds" />
-    <Description value="WMMZAirdropSpawnZeds" />
-    <Author value="w00kie n00kie" />
-    <Version value="1.0.0.0" />
-    <Website value="" />
-  </ModInfo>
+	<Name value="WMMZAirdropSpawnZeds" />
+	<DisplayName value="Airdrop Spawn Zeds" />
+	<Version value="1.0.0.0" />
+	<Description value="" />
+	<Author value="w00kie n00kie" />
+	<Website value="" />
 </xml>

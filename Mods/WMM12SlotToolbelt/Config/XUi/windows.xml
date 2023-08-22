@@ -1,0 +1,16 @@
+<config>
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/rect[@controller='Toolbelt']/grid/@cols">12</set>
+
+	<set xpath="/windows/window[@name='windowToolbelt']/@width">903</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/@pos">-451, 92</set>
+
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/sprite[@fill='{xp}']/@width">900</set>
+
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Food']/@width">453</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Food']/filledsprite/@width">451</set>
+
+
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Water']/@width">452</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Water']/@pos">451,-77</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Water']/filledsprite/@width">451</set>
+</config>

@@ -1,0 +1,22 @@
+﻿<windows>
+  <!-- Video Options-->
+  <set xpath="/windows/window[@name='optionsVideo']/@controller">XUiC_WMMOptionsVideo, WMMVideoOptions</set>
+  <set xpath="/windows/window[@name='optionsVideo']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cols">5</set>
+  
+  <insertAfter xpath="/windows/window[@name='optionsVideo']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiOptionsVideoUI']" >
+    <rect tab_key="xuiOptionsVideoWinchester">
+      <grid pos="8,-40" rows="4" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
+        <videooption name="ShowCrosshair" type="ComboBoxBool" />
+        <videooption name="ShowActivationText" type="ComboBoxBool" />
+        <videooption name="ShowOnScreenSprites" type="ComboBoxBool" />
+		<videooption name="ShowZombieHealthBar" type="ComboBoxBool" />
+		<videooption name="ShowXPPopUp" type="ComboBoxBool" />
+      </grid>
+      <label depth="4" width="220" height="30" text_key="xuiCrosshairColorFor" font_size="28" color="[white]" pos="120,-220"/>
+      <rect name="CrosshairColor" pos="292,-220">
+        <color_picker/>
+      </rect>
+    </rect>
+  </insertAfter>
+  
+</windows>

@@ -1,8 +1,0 @@
-﻿<config>
-	<set xpath="/buffs/buff[@name='buffBurningMolotov']/effect_group/passive_effect[@name='HealthChangeOT' and @value='10,36,51,56']/@value">5,18,25.4,28</set>
-	<set xpath="/buffs/buff[@name='buffBurningMolotov']/effect_group/passive_effect[@name='HealthChangeOT' and @value='7.5,27,38.2,42']/@value">3.7,13.5,19.1,21</set>
-	<set xpath="/buffs/buff[@name='buffBurningMolotov']/effect_group/passive_effect[@name='HealthChangeOT' and @value='5,18,25.5,28']/@value">2.5,9,12.6,14</set>
-	<set xpath="/buffs/buff[@name='buffBurningMolotov']/effect_group/passive_effect[@name='HealthChangeOT' and @value='4.2,14.9,21.1,23.2']/@value">2.1,7.4,10.6,16.6</set>
-	<set xpath="/buffs/buff[@name='buffBurningMolotov']/effect_group/passive_effect[@name='HealthChangeOT' and @value='3.3,11.9,16.8,18.5']/@value">1.6,5.9,8.4,9.2</set>
-	<set xpath="/buffs/buff[@name='buffBurningMolotov']/effect_group/passive_effect[@name='HealthChangeOT' and @value='2.5,9,12.7,14']/@value">1.2,4.5,6.3,7</set>
-</config>

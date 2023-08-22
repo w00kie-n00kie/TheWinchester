@@ -1,0 +1,11 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+xuiOptionsVideoWinchester,,UI,XUi Video Options,newKey,Winchester,,,,,
+xuiOptionsVideoShowCrosshair,,UI,XUi Video Options,newKey,Show Crosshair,,,,,
+xuiOptionsVideoShowCrosshairTooltip,,UI,XUi Video Options,newKey,Show Crosshair.,,,,,
+xuiOptionsVideoShowActivationText,,UI,XUi Video Options,newKey,Activation Text,,,,,
+xuiOptionsVideoShowActivationTextTooltip,,UI,XUi Video Options,newKey,Activation Text.,,,,,
+xuiOptionsVideoShowOnScreenSprites,,UI,XUi Video Options,newKey,Show On Screen Sprites,,,,,
+xuiOptionsVideoShowShowOnScreenSpritesTooltip,,UI,XUi Video Options,newKey,Show On Screen Sprites.,,,,,
+xuiCrosshairColorFor,,UI,XUi Video Options,newKey,Crosshair Color,,,,,
+xuiOptionsVideoShowZombieHealthBar,,UI,XUi Video Options,newKey,Show Zombie Health Bar,,,,,
+xuiOptionsVideoShowXPPopUp,,UI,XUi Video Options,newKey,Show XP Pop Up,,,,,

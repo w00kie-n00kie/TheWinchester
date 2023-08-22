@@ -1,0 +1,10 @@
+﻿<xui>
+	
+	<insertBefore xpath="/xui/ruleset/window_group[@name='dialog']/window[@name='windowRespondentName']">
+		<window name="mapAreaTrader" />
+		<window name="mapTraderQuests" />
+	</insertBefore>
+
+	<set xpath="/xui/ruleset/window_group[@name='dialog']/@controller">XUiC_WMMDialogWindowGroup, WMMTraderQuestMap</set>
+	
+</xui>

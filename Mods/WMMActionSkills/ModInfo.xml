@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<ModInfo>
-		<Name value="WMMActionSkills" />
-		<Description value="WMMActionSkills" />
-		<Author value="JaxTeller718 and w00kie n00kie" />
-		<Version value="1.0.0.0" />
-		<Website value="" />
-	</ModInfo>
+	<Name value="WMMActionSkills" />
+	<DisplayName value="Action Skills" />
+	<Version value="1.0.0.0" />
+	<Description value="" />
+	<Author value="w00kie n00kie" />
+	<Website value="" />
 </xml>
