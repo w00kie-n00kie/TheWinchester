@@ -1,0 +1,4 @@
+﻿<config>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry/unlock_entry[@item='foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce']/@item">foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce,drinkWhisky</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='60,100']/@tags">foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce,drinkWhisky</set>
+</config>

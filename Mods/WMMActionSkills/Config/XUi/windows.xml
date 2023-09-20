@@ -1,4 +1,34 @@
 <config>
 	<set xpath="/windows/window[@name='windowSkillPerkInfo']/@hidden_entries_with_paging">0</set>
 	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect/rect[@name='pagerBox']/@pos">3,-678</set>
+
+	<insertAfter xpath="/windows/window[@name='HUDLeftStatBars']" >
+		<window name="windowActionSkills">
+			<panel name="actionSkills" pos="200,156" rows="2" cols="1" width="168" side="right" controller="XUiC_WMMActionSkills, WMMActionSkills">
+				<!-- <grid name="hud" pos="9,52" rows="3" cols="1" width="171" cell_width="168" cell_height="47" repeat_content="false" side="left" pivot="BottomLeft"> 
+				<rect width="171" height="46" controller="XUiC_WMMActionSkills, WMMActionSkills">
+					<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced" />
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+
+					<label depth="6" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" width="125" height="35"/>
+				</rect>-->
+
+
+				<rect width="171" height="46" pos="0,-100">
+					<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced" />
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+
+					<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
+
+					<filledsprite depth="4" name="BarContent" color="181, 174, 33, 158" type="filled" fill="1" />
+					<label depth="6" name="TextContent" pos="24,-23" font_size="20" color="[white]" justify="center" pivot="left" width="125" height="35"/>
+
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="1" />
+				</rect>
+
+			</panel>
+		</window>
+	</insertAfter>
 </config>

@@ -1,0 +1,9 @@
+﻿<config>
+	<append xpath="/recipes">
+		<recipe name="drinkWhisky" count="1" craft_time="360" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodCropBlueberries" count="20"/>
+			<ingredient name="resourceCropHopsFlower" count="20"/>
+		</recipe>
+	</append>
+</config>

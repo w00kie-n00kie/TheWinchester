@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+drinkWhisky,items,Food,,,Whisky,,,,,,,,,,,,,,
+drinkWhiskyDesc,items,Food,,,300% Fist Melee Damage\n50% Stamina Gain\n\nGain stamina, bravado and stun immunity all in one bottle of this tasty home brewed Whisky.,,,,,,,,,,,,,,
+drinkWhiskySchematic,items,Food,,,Whisky Recipe,,,,,,,,,,,,,,

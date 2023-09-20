@@ -1,0 +1,15 @@
+<config>
+
+	<set xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']/@value">900</set>
+	<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']/@value">60</set>
+	<set xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']/@value">225</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Stacknumber']/@value">450</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='Stacknumber']/@value">225</set>
+	
+</config>

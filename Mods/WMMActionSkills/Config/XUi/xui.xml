@@ -1,0 +1,6 @@
+<config>
+
+	<insertAfter xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars']" >
+		<window name="windowActionSkills" anchor="LeftBottom" />
+	</insertAfter>
+</config>

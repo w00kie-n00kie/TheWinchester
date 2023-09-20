@@ -10,7 +10,7 @@
     <rect tab_key="xuiWinchester">
       <grid pos="6,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
         <gameoption name="MaxSpawnedZombies" title="goMaxSpawnedZombies" value_wrap="false" value_type="int" values="0, 10, 30, 60, 64, 100, 125, 150, 175, 200" display_names="" value_localization_prefix="" />
-		<gameoption name="CustomCityZombieMultiplier" title="goCityZombieMultiplier" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
+		<gameoption name="CustomCityZombieMultiplier" title="goCityZombieMultiplier" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
 		<gameoption name="CustomBiomeRespawnDelay" title="goBiomeRespawnDelay" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
 		<gameoption name="CustomHeadShotOnly" title="goHeadShotOnly" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="false" />
 		<gameoption name="CustomZombieRage" title="goZombieRage" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true"  />

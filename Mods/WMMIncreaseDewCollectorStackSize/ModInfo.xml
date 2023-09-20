@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="WMMIncreaseDewCollectorStackSize" />
+	<DisplayName value="Increase Dew Collector Stack Size" />
+	<Version value="1.0.0.0" />
+	<Description value="" />
+	<Author value="w00kie n00kie" />
+	<Website value="" />
+</xml>

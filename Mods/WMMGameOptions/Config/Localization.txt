@@ -1,7 +1,7 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
 xuiWinchester,,XUi,Game Settings,KeyTrunk,Winchester,,,,,
-goCityZombieMultiplier,,UI,Menu,KgNone,City Zombie Multiplier,,,,,
-goCityZombieMultiplierDesc,,UI,Menu,KgNone,Multiplier for how many extra zeds to spawn in cites. For each POI X extra zombies will spawn i.e. if 2 POIs and multiplier is set to 5 it will spawn 10 zombies.,,,,,
+goCityZombieMultiplier,,UI,Menu,KgNone,City Zombie Count Modifier,,,,,
+goCityZombieMultiplierDesc,,UI,Menu,KgNone,Modifier for how many extra zeds to spawn in cites. Extra zombies to spawn is calculated by Modifier X POICount. i.e. if 2 POIs in local area and multiplier is set to 5 it will spawn up to 10 extra zombies on top of vanilla zombie count.,,,,,
 goHeadShotOnly,,UI,Menu,KgNone,Head Shot Only,,,,,
 goHeadShotOnlyDesc,,UI,Menu,KgNone,Only head shots do damage to zombies.,,,,,
 goShowFetchItemOnCompass,,UI,Menu,KgNone,Show Fetch Items On Compass,,,,,

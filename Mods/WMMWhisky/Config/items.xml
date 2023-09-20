@@ -1,0 +1,39 @@
+﻿<config>
+	<append xpath="/items">
+		<item name="drinkWhisky">
+			<property name="Tags" value="drinks,foodSkill"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property name="DisplayType" value="waterBeer"/>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
+			<property name="CustomIcon" value="drinkJarGrandpasAwesomeSauce"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2"/>
+				<property name="Sound_start" value="player_drinking"/>
+			</property>
+			<effect_group tiered="false" name="Drink Tier 3">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<display_value name="dStaminaRegen" value=".4"/>
+				<display_value name="dEntityDamageBrawling" value="3"/>
+				<display_value name="dStunResist" value="1"/>
+				<display_value name="dDuration" value="360"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="add" value="363"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="set" value="1083">
+					<requirement name="CVarCompare" cvar="$buffBeerDuration" operation="GT" value="1083"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeer"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+	</append>
+</config>
