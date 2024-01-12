@@ -1,4 +1,6 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
-lblDumpInventory,,UI,Tooltip,New,Stash Inventory,,,,,
-lblDumpMatchingInventory,,UI,Tooltip,New,Stash Matching Items To Inventory,,,,,
+lblDumpInventory,,UI,Tooltip,New,Stash All Items To Storage,,,,,
+lblDumpMatchingInventory,,UI,Tooltip,New,Stash Matching Items To Storage,,,,,
 lblDumpInfo,,UI,Tooltip,New,Hover over a slot and press X to lock or unlock a slot.,,,,,
+lblAutoDump,,UI,Tooltip,New,Auto dump all matching items in your backpack into player made storage containers within the land claim area.,,,,,
+lblTakeMatching,,UI,Tooltip,New,Take Matching Items Only,,,,,

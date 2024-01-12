@@ -1,8 +1,12 @@
 <windows>
-	<set xpath="/windows/window[@name='windowBackpack']/@controller">XUiC_WMMStashBackpack, WMMStashBackpack</set>	
+	<set xpath="/windows/window[@name='windowBackpack']/@controller">XUiC_WMMStashBackpack, WMMStashBackpack</set>
+
+	<insertAfter xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/rect">
+		<button depth="3" name="btnAutoDump" sprite="ui_game_symbol_treasure" tooltip_key="lblAutoDump" pos="120, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+	</insertAfter >
 	
-	<insertAfter xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/rect/button[@name='btnMoveFillAndSmart']">
-        <button depth="3" name="dumpInfo" style="icon32px, hover" pivot="center" pos="120,-22" sprite="ui_game_symbol_quest" tooltip_key="lblDumpInfo" />
+	<insertAfter xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/rect/button[@name='btnMoveFillAndSmart']">	
+        <button depth="3" name="dumpInfo" style="icon32px, hover" pivot="center" pos="160,-22" sprite="ui_game_symbol_quest" tooltip_key="lblDumpInfo" />
 	</insertAfter >
 	
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/rect/button[@name='btnMoveAll']/@tooltip_key">lblDumpInventory</set>
@@ -10,4 +14,10 @@
 
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/rect/button[@name='btnMoveFillAndSmart']/@tooltip_key">lblDumpMatchingInventory</set>
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/rect/button[@name='btnMoveFillAndSmart']/@name">btnDumpMatching</set>
+
+	<set xpath="/windows/window[@name='windowVehicleStorage']/panel[@name='header']/rect[@controller='ContainerStandardControls']/button[@name='btnMoveFillAndSmart']/@tooltip_key">lblTakeMatching</set>
+	<set xpath="/windows/window[@name='windowLooting']/panel[@name='header']/rect[@controller='ContainerStandardControls']/button[@name='btnMoveFillAndSmart']/@tooltip_key">lblTakeMatching</set>
+
+	<remove xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect[@controller='ContainerStandardControls']/combobox[@name='cbxLockedSlots']" />
+	
 </windows>

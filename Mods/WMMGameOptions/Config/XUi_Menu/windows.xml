@@ -1,15 +1,17 @@
 ﻿<windows>
-  <!-- Game Options-->
-  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cell_width">117</set>
-  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cols">5</set>
-  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/simplebutton/@width">116</set>
-  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/simplebutton/@font_size">24</set>
-  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/sprite/@pos">115,0</set>
+	<!-- Game Options-->
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cell_width">98</set>
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/@cols">6</set>
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/simplebutton/@width">97</set>
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/simplebutton/@font_size">24</set>
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsHeader']/grid[@name='tabButtons']/rect/sprite/@pos">96,0</set>
 
-  <insertAfter xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']" >
-    <rect tab_key="xuiWinchester">
-      <grid pos="6,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
-        <gameoption name="MaxSpawnedZombies" title="goMaxSpawnedZombies" value_wrap="false" value_type="int" values="0, 10, 30, 60, 64, 100, 125, 150, 175, 200" display_names="" value_localization_prefix="" />
+	<remove xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsBasic']/grid/gameoption[@name='ZombieFeralSense']" />
+
+	<insertAfter xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']" >
+	<rect tab_key="xuiWinchester1">
+		<grid pos="6,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
+		<gameoption name="MaxSpawnedZombies" title="goMaxSpawnedZombies" value_wrap="false" value_type="int" values="0, 10, 30, 60, 64, 100, 125, 150, 175, 200" display_names="" value_localization_prefix="" />
 		<gameoption name="CustomCityZombieMultiplier" title="goCityZombieMultiplier" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
 		<gameoption name="CustomBiomeRespawnDelay" title="goBiomeRespawnDelay" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" display_names="" value_localization_prefix="" default_value="1" />
 		<gameoption name="CustomHeadShotOnly" title="goHeadShotOnly" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="false" />
@@ -20,8 +22,18 @@
 		<gameoption name="CustomTraderSellPriceMultiplier" title="goTraderSellPriceMultiplier" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5" display_names="" value_localization_prefix="goLandClaimOnlineDurabilityModifierValue" default_value="1" />
 		<gameoption name="CustomTraderQuestsPerTier" title="goTraderQuestsPerTier" value_wrap="false" value_type="int" values="5, 7, 10, 15, 20, 30" display_names="" value_localization_prefix="" default_value="10" />
 		<gameoption name="CustomItemsDegradeOnRepair" title="goItemsDegradeOnRepair" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true" />
-	  </grid>
-    </rect>
-  </insertAfter>
+		<gameoption name="CustomSleeperMultiplier" title="goSleeperMultiplier" value_wrap="false" value_type="int" values="0, 1, 2, 3" display_names="goSleeperMultiplier1,goSleeperMultiplier2,goSleeperMultiplier3,goSleeperMultiplier4" value_localization_prefix="" default_value="0"  />
+		</grid>
+	</rect>
+	<rect tab_key="xuiWinchester2">
+		<grid pos="6,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
+			<gameoption name="CustomItemsInLootContainer" title="goItemsInLootContainer" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true" />
+			<gameoption name="CustomItemsFromTraderInvertory" title="goItemsFromTraderInvertory" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true" />
+			<gameoption name="CustomItemsFromTraderQuests" title="goItemsFromTraderQuest" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" default_value="true" />
+			<gameoption name="CustomFeralSenseRangeDay" title="goFeralSenseRangeDay" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5" display_names="goFeralSenseRange0, goFeralSenseRange1, goFeralSenseRange2, goFeralSenseRange3, goFeralSenseRange4, goFeralSenseRange5" value_localization_prefix="" default_value="0"  />
+			<gameoption name="CustomFeralSenseRangeNight" title="goFeralSenseRangeNight" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5" display_names="goFeralSenseRange0, goFeralSenseRange1, goFeralSenseRange2, goFeralSenseRange3, goFeralSenseRange4, goFeralSenseRange5" value_localization_prefix="" default_value="0"  />
+		</grid>
+	</rect>
+	</insertAfter>
 
 </windows>

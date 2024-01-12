@@ -4,7 +4,7 @@
 
 	<insertAfter xpath="/windows/window[@name='HUDLeftStatBars']" >
 		<window name="windowActionSkills">
-			<panel name="actionSkills" pos="200,156" rows="2" cols="1" width="168" side="right" controller="XUiC_WMMActionSkills, WMMActionSkills">
+			<panel name="actionSkills" pos="200,56" rows="2" cols="1" width="168" side="right" controller="XUiC_WMMActionSkills, WMMActionSkills">
 				<!-- <grid name="hud" pos="9,52" rows="3" cols="1" width="171" cell_width="168" cell_height="47" repeat_content="false" side="left" pivot="BottomLeft"> 
 				<rect width="171" height="46" controller="XUiC_WMMActionSkills, WMMActionSkills">
 					<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced" />
@@ -14,7 +14,7 @@
 				</rect>-->
 
 
-				<rect width="171" height="46" pos="0,-100">
+				<rect width="171" height="46" pos="0,0">
 					<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced" />
 					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
 

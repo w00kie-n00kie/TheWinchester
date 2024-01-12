@@ -10,4 +10,10 @@
 	<config name="CustomTraderSellPriceMultiplier" value="1"/>
 	<config name="CustomTraderQuestsPerTier" value="10"/>
 	<config name="CustomItemsDegradeOnRepair" value="true"/>
+	<config name="CustomSleeperMultiplier" value="0"/>
+	<config name="CustomItemsInLootContainer" value="true"/>
+	<config name="CustomItemsFromTraderInvertory" value="true"/>
+	<config name="CustomItemsFromTraderQuests" value="true"/>
+	<config name="CustomFeralSenseRangeDay" value="0"/>
+	<config name="CustomFeralSenseRangeNight" value="0"/>
 </customgameoptions>

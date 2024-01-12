@@ -1,7 +1,7 @@
 ﻿<windows>
 
 	<insertAfter xpath="/windows/window[@name='mapArea']" >
-		<window name="mapAreaTrader" width="718" height="770" pos="-200,400" controller="XUiC_WMMMapArea, WMMTraderQuestMap" cursor_area="true" >
+		<window name="mapAreaTrader" width="718" height="770" pos="-400,400" controller="XUiC_WMMMapArea, WMMTraderQuestMap" cursor_area="true" >
 			<panel name="header" pos="3,0" height="43" depth="1" backgroundspritename="ui_game_panel_header">
 				<sprite depth="1" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_map"/>
 				<label style="header.name" text="Trader Quest Map"/>
@@ -98,7 +98,7 @@
 	</insertAfter>
 
 	<insertAfter xpath="/windows/window[@name='mapArea']" >
-		<window name="mapTraderQuests" width="354" height="513" pos="-564,400" controller="XUiC_WMMMapTraderQuests, WMMTraderQuestMap" cursor_area="true" >
+		<window name="mapTraderQuests" width="354" height="513" pos="-764,400" controller="XUiC_WMMMapTraderQuests, WMMTraderQuestMap" cursor_area="true" >
 
 			<panel name="header" pos="3,0" height="43" depth="1" backgroundspritename="ui_game_panel_header">
 				<sprite depth="1" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_map_waypoint_set"/>
@@ -120,17 +120,17 @@
 				</grid>
 			</rect>
 
-			<panel name="header" height="43"  pos="2,-350" depth="1" backgroundspritename="ui_game_panel_header" >
+			<panel name="header" height="43"  pos="2,-330" depth="1" backgroundspritename="ui_game_panel_header" >
 				<sprite pos="4,-5" depth="2" name="windowIcon" style="icon32px" sprite="ui_game_symbol_quest"/>
 				<label style="header.name" name="questname" text="{questname}" width="450" font_size="28" pos="35,-9"/>
 				<label depth="2" pos="245,-10" width="100" height="28" name="questdifficulty" text="{questdifficulty}" justify="right" upper_case="true" font_size="24" />
 			</panel>
-			<panel name="content" pos="2,-392" height="329" depth="1" backgroundcolor="[darkGrey]" bordercolor="[black]" borderthickness="3" pivot="center">
-				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="354" height="329" color="[black]" type="sliced" fillcenter="false" />
-				<label depth="3" name="descriptionText" pos="6,-5" text="{questoffer}" width="342" height="320" font_size="28" />
+			<panel name="content" pos="2,-372" height="434" depth="1" backgroundcolor="[darkGrey]" bordercolor="[black]" borderthickness="3" pivot="center">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="354" height="433" color="[black]" type="sliced" fillcenter="false" />
+				<label depth="3" name="descriptionText" pos="6,-5" text="{questoffer}" width="342" height="320" font_size="26" />
 			</panel>
 
-			<rect name="btnAccept" depth="3" pos="2, -718" height="36" disableautobackground="true">
+			<rect name="btnAccept" depth="3" pos="2, -770" height="36" disableautobackground="true">
 				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="355" />
 				<sprite depth="2" name="background" pos="3,-3" sprite="menu_empty" width="276" height="32" color="[darkGrey]" type="sliced" />
 				<rect depth="3" pos="0,-3" width="355" height="31">
@@ -140,6 +140,10 @@
 					<label depth="2" name="windowName" pos="0,-2" justify="center" text="ACCEPT" text_key="xuiAccept" effect="outline" />
 				</rect>
 			</rect>
+
+			<panel name="previewFrame" depth="2" pos="70,-590" width="221" height="169" disableautobackground="true" snap="false">
+				<texture depth="2" name="prefabPreview" material="Materials/Transparent Colored" globalopacity="false"/>
+			</panel>
 		</window>
 	</insertAfter>
 
